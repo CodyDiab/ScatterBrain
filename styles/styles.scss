@@ -63,6 +63,10 @@ header{
      background-color: $btnColor;
  }
 
+ input[type=text]{
+     border-bottom:2px solid $secondaryColor;
+ }
+
  @media only screen and (max-width: 768px) {
 
     .buttons-container{
