@@ -2,6 +2,7 @@
 @import "./login-splash";
 @import "./modal";
 @import "./subject-card";
+@import "./subject";
 
 @mixin flexCenter ($direction,$background){
     display: flex;
@@ -30,6 +31,7 @@ header{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    align-content: flex-end;
      background-color: $primaryColor;
      height: 30vh;
      border-top-right-radius: 30vh;
@@ -50,12 +52,25 @@ header{
  }
   
  .buttons-container{
-     display: flex;
-     align-items: flex-end;
-     justify-content: space-around;
-     width: 47vh;
+    margin-top: 3%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: row;
+
+    
  }
  .mdl-button{
      background-color: $btnColor;
  }
 
+ @media only screen and (max-width: 768px) {
+
+    .buttons-container{
+        display: flex;
+        margin-top: 5%;
+        margin-right: 0;
+        flex-direction: column;
+    
+    }
+
+}
