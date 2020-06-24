@@ -1,0 +1,19 @@
+{
+  "name": "scatterbrain",
+  "version": "1.0.0",
+  "description": "Web tab organization",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodyDiab/ScatterBrain.git"
+  },
+  "author": "Cody Diab and John Ryan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodyDiab/ScatterBrain/issues"
+  },
+  "homepage": "https://github.com/CodyDiab/ScatterBrain#readme"
+}
