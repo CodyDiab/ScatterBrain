@@ -1,0 +1,16 @@
+.subject-card{
+   border-radius: 15%;
+   width: 320px;
+   height: 200px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .subject-card {
+      width: 100%;
+    }
+    .view-btn{
+        float:right;
+        margin-right: 30px;
+    }
+  }

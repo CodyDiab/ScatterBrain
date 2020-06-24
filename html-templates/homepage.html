@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</head>
+<body>
+  <div class="home">
+    <header>
+      <h1 class="heading">ScatterBrain</h1>
+  <nav class="buttons-container">
+   <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect " title="Add a Subject" id="add-button">
+    <i class="material-icons">add</i>
+  </button> 
+  
+   <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect " title="Log Out">
+    <i class="material-icons">logout</i>
+  </button>
+  </nav>
+    </header>
+    <main class="field">
+   <!---subjects go here-->
+
+   <div class="subject-card mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+     <h2 class="mdl-card__title-text">Subject</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+     Has __ Resources
+   </div>
+    <div class = "mdl-card__actions">
+     <a class="view-btn mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+         View Resources
+       </a>
+    </div>
+
+</div>
+
+  
+    </main>
+
+<!--new subject modal-->
+<div id="subject-modal" class="subject-modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+       
+      <span class="close">&times;</span>
+      <form action="#">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="sample3">
+          <label class="mdl-textfield__label" for="sample3">Create a new Subject...</label>
+        </div>
+      </form>
+         <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect " title="Submit" type="submit">
+           <i class="material-icons">add</i>
+         </button> 
+    </div>
+  
+  </div>
+</div>
+<script src="../styles/javascript/modalHandeler.js"></script>
+</body>
+</html>

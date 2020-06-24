@@ -2,9 +2,10 @@
   "name": "scatterbrain",
   "version": "1.0.0",
   "description": "Web tab organization",
-  "main": "index.js",
+  "main": "inde",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "",
+    "start":"node server.js"
   },
   "repository": {
     "type": "git",
