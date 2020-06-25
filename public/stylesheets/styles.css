@@ -88,6 +88,19 @@ input[type=submit] {
   transition: all 0.3s ease-in-out;
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .login-splash {
+    width: 100%;
+  }
+  .form-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .subject-modal {
   display: none;
   position: fixed;
