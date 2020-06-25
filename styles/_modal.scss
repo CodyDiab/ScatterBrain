@@ -23,7 +23,10 @@
   }
   .edit-resource-modal{
     @include modal;
-    display:block;
+    
+  }
+  .add-resource-modal{
+    @include modal;
   }
   /* Modal Content/Box */
   .modal-content {

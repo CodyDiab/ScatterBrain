@@ -14,7 +14,7 @@
     <header>
       <h1 class="heading">ScatterBrain</h1>
   <nav class="buttons-container">
-   <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect " title="Add a Subject" id="add-button">
+   <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect " title="Add a Subject" id="add-subject">
     <i class="material-icons">add</i>
   </button> 
   
@@ -39,7 +39,7 @@
        </a>
     </div>
     <div class="mdl-card__menu">
-      <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+      <button id="edit-subject" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
         <i class="material-icons">edit</i>
       </button>
     </div>
@@ -55,7 +55,7 @@
     <!-- Modal content -->
     <div class="modal-content">
        
-      <span class="close">&times;</span>
+      <span id="close-subject-modal" class="close">&times;</span>
       <form action="#">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
           <input class="mdl-textfield__input" type="text" id="">
@@ -74,7 +74,7 @@
   <!-- Modal content -->
   <div class="modal-content">
      
-    <span class="close">&times;</span>
+    <span id="close-edit-subject" class="close">&times;</span>
     <form action="#">
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <input class="mdl-textfield__input" type="text" id="">
@@ -91,6 +91,6 @@
 
 </div>
 </div>
-<script src="../styles/javascript/modalHandeler.js"></script>
+<script src="../styles/javascript/homepageModal.js"></script>
 </body>
 </html>
