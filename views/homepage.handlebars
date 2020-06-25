@@ -13,16 +13,17 @@
     </header>
     <main class="field">
    <!---subjects go here-->
-
+   {{#if subjects.length}}
    <div class="subject-card mdl-card mdl-shadow--2dp">
-    <div class="mdl-card__title">
-     <h2 class="mdl-card__title-text">Subject</h2>
+     <div class="mdl-card__title">
+     <h2 class="mdl-card__title-text">{{subject.title}}</h2>
+     <p>{{format_date created_at}}</p>
     </div>
     <div class="mdl-card__supporting-text">
-     Has __ Resources
+     Has {{resources.length}} {{format_plural "resource" resource.length}}
    </div>
     <div class = "mdl-card__actions">
-     <a class="view-btn mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+     <a class="view-btn mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/subject/{{id}}">
          View Resources
        </a>
     </div>
@@ -31,6 +32,8 @@
         <i class="material-icons">edit</i>
       </button>
     </div>
+   
+    {{/if}}
 
 </div>
 

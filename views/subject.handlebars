@@ -19,11 +19,11 @@
        
            <div class="resource mdl-card mdl-shadow--2dp">
              <div class="mdl-card__title">
-               <a href=""><i class="material-icons">link</i></a>
-              <h2 class="mdl-card__title-text">Resource Title</h2>
+               <a href="{{resource_url}}"><i class="material-icons">link</i></a>
+              <h2 class="mdl-card__title-text">{{resource.title}}</h2>
               </div>
              <div class="mdl-card__supporting-text">
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quidem totam possimus iusto libero a atque voluptas perferendis asperiores, et aliquam quia aut excepturi consequuntur eaque fugit adipisci iste? Recusandae.
+               {{resource.notes}}
              </div>
              <div class="mdl-card__menu">
               <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="edit-resource">
