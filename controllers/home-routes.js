@@ -66,42 +66,40 @@ router.get('/subjects/:id', (req, res) => {
      where: {
        user_id: req.params.id
      },
-   //   attributes: [
-   //     'id',
-   //      'title',
-   //      'user_id',
-   //     'created_at',
+     attributes: [
+       'id',
+        'title',
+        'user_id',
+       'created_at',
       
-   //   ],
-   //   include: [
-   //     {
-   //       model: User,
-   //       attributes: ['username'],
-   //       },
-   //      { model: Post,
-   //       attributes: ['id']
+     ],
+     include: [
+       {
+         model: User,
+         attributes: ['username'],
+         },
+        { model: Post,
+         attributes: ['id']
 
-   //     },
-      //  {
-      //    model: User,
-      //    attributes: ['username']
-      //  }
-     //]
+       },
+       {
+         model: User,
+         attributes: ['username']
+       }
+     ]
    })
      .then(dbSubjectData => {
-       if (!dbSubjectData) {
-         res.render('homepage',{
-            loggedIn: req.session.loggedIn
-         })
-       }
+        console.log(dbSubjectData)
+       
+     
  
        // serialize the data
-       const post = dbSubjectData.get({ plain: true });
+       const subjects = dbSubjectData.map(subject => subject.get({ plain: true }));
  
        // pass data to template
        res.render('homepage', { 
-          post, 
-          loggedIn: req.session.loggedIn
+          subjects, 
+         loggedIn: req.session.loggedIn
          });
      })
      .catch(err => {

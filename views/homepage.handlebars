@@ -14,9 +14,10 @@
     <main class="field">
    <!---subjects go here-->
    {{#if subjects.length}}
+    {{#each subjects}}
    <div class="subject-card mdl-card mdl-shadow--2dp">
      <div class="mdl-card__title">
-     <h2 class="mdl-card__title-text">{{subject.title}}</h2>
+     <h2 class="mdl-card__title-text">{{subjects.subject.title}}</h2>
      <p>{{format_date created_at}}</p>
     </div>
     <div class="mdl-card__supporting-text">
@@ -31,14 +32,16 @@
       <button id="edit-subject" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
         <i class="material-icons">edit</i>
       </button>
+     </div>
     </div>
+    {{/each}}
     {{else}}
     <div>
         <p>Add some subjects!</p>
     </div>
     {{/if}}
 
-</div>
+
 
   
     </main>
@@ -50,15 +53,16 @@
     <div class="modal-content">
        
       <span id="close-subject-modal" class="close">&times;</span>
-      <form action="#">
+      <form action="#" class="new-subject-form">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" id="">
+          <input class="mdl-textfield__input" type="text" id="" name="subject-title">
           <label class="mdl-textfield__label" for="">Create a new Subject...</label>
         </div>
-      </form>
-         <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect " title="Submit" type="submit">
+         <button id="new-subject-submit" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect " title="Submit" type="submit">
            <i class="material-icons">add</i>
          </button> 
+      </form>
+        
     </div>
   
   </div>

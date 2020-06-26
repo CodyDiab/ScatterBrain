@@ -31,7 +31,7 @@ router.post('/', withAuth, (req, res) => {
    // check the session
    if (req.session) {
      Subject.create({
-       comment_text: req.body.comment_text,
+       title: req.body.title,
        
        // use the id from the session
        user_id: req.session.user_id
