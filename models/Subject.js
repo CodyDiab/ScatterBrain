@@ -8,11 +8,12 @@ Subject.init(
       id: {
          type: DataTypes.INTEGER,
          primaryKey: true,
-         autoIncrement: true
+         autoIncrement: true,
+         allowNull: false
       },
       comment_text: {
          type: DataTypes.TEXT,
-         allowNull: false,
+         allowNull: true,
          validate: {
             len: [1]
          }
@@ -25,20 +26,12 @@ Subject.init(
             key: 'id'
          }
       },
-      post_id: {
-         type: DataTypes.INTEGER,
-         allowNull: false,
-         references: {
-            model: 'post',
-            key: 'id'
-         }
-      }
    },
    {
       sequelize,
       freezeTableName: true,
       underscored: true,
-      modelName: 'comment'
+      modelName: 'subject'
    }
 );
 

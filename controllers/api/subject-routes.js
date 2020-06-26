@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Subject } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+/*
 router.get('/', (req, res) => {
    Subject.findAll({})
       .then(dbCommentData => res.json(dbCommentData))
@@ -10,12 +11,12 @@ router.get('/', (req, res) => {
          res.status(400).json(err);
       });
 });
-
+*/
 
 router.get('/:id', (req, res) => {
    Subject.findAll({
       where: {
-         post_id: req.params.id
+         user_id: req.params.id
       }
    })
       .then(dbCommentData => res.json(dbCommentData))
@@ -31,7 +32,7 @@ router.post('/', withAuth, (req, res) => {
    if (req.session) {
      Subject.create({
        comment_text: req.body.comment_text,
-       post_id: req.body.post_id,
+       
        // use the id from the session
        user_id: req.session.user_id
      })

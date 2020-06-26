@@ -11,10 +11,6 @@ router.get('/', (req, res) => {
       'post_url', 
       'title', 
       'created_at',
-      [
-        sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'),
-        'vote_count'
-      ]
     ],
     order: [['created_at', 'DESC']],
     include: [
@@ -23,7 +19,6 @@ router.get('/', (req, res) => {
         attributes: [
           'id',
           'comment_text',
-          'post_id',
           'user_id',
           'created_at'
         ],
@@ -32,10 +27,10 @@ router.get('/', (req, res) => {
           attributes: ['username']
         }
       },
-      {
+   /*   {
         model: User,
         attributes: ['username']
-      }
+      } */
     ]
   })
     .then(dbPostData => res.json(dbPostData))
@@ -55,11 +50,8 @@ router.get('/:id', (req, res) => {
       'id', 
       'post_url', 
       'title', 
+      'notes',
       'created_at',
-      [
-        sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'),
-        'vote_count'
-      ]
     ],
     include: [
       {
@@ -67,7 +59,6 @@ router.get('/:id', (req, res) => {
         attributes: [
           'id',
           'comment_text',
-          'post_id',
           'user_id',
           'created_at'
           ],
@@ -76,10 +67,10 @@ router.get('/:id', (req, res) => {
             attributes: ['username']
           }
       },
-      {
+    /*  {
         model: User,
         attributes: ['username']
-      }
+      } */
     ]
   })
     .then(dbPostData => {
@@ -101,7 +92,8 @@ router.get('/:id', (req, res) => {
   Post.create({
     title: req.body.title,
     post_url: req.body.post_url,
-    user_id: req.session.user_id
+    notes: req.body.notes,
+    subject_id: req.body.subject_id
   })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
@@ -110,19 +102,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
-// PUT /api/posts/upvote
-router.put('/upvote', withAuth, (req, res) => {
-  // make sure the session exists first
-  if (req.session) {
-    // pass session id along with all destructured properties on req.body
-    Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
-      .then(updatedVoteData => res.json(updatedVoteData))
-      .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-      });
-  }
-});
+
 
 // update a post
 router.put('/:id', withAuth, (req, res) => {
