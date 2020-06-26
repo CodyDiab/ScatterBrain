@@ -16,7 +16,7 @@
     </header>
     <main class="field">
      <div class="mdl-list">
-       
+       {{#if posts.length}}
            <div class="resource mdl-card mdl-shadow--2dp">
              <div class="mdl-card__title">
                <a href="{{resource_url}}"><i class="material-icons">link</i></a>
@@ -31,6 +31,13 @@
               </button>
             </div>
            </div>
+        {{else}}
+        <div>
+            <p>
+                Add Resources to your Subject
+            </p>
+        </div>
+        {{/if}}
     <!--Add Resource modal-->
     <div id="add-resource-modal" class="add-resource-modal">
 
@@ -97,4 +104,7 @@
      </div>
   
     </main>
+    {{#if posts.length}}
     <script src="/javascript/subjectModal.js"></script>
+    {{/if}}
+    <script src="/javascript/logout.js"></script>

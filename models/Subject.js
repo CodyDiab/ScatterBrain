@@ -11,7 +11,7 @@ Subject.init(
          autoIncrement: true,
          allowNull: false
       },
-      comment_text: {
+      title: {
          type: DataTypes.TEXT,
          allowNull: true,
          validate: {

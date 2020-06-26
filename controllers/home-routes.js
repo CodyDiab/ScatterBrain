@@ -5,18 +5,21 @@ const { Post, User, Subject } = require('../models');
 
 //init render if not logged in
 router.get('/', (req, res) => {
-   if (req.session.loggedIn) {
-     res.redirect('/homepage');
+   if (req.session.loggedIn) { //add session id?
+     const id = req.session.user_id
+     res.redirect(`/subjects/${id}`);
      return;
    }
  
    res.render('login');
 });
 //when logged in
-router.get('/homepage', (req, res) => {
+router.get('/posts/:id', (req, res) => {
    console.log(req.session);
-
-   Post.findAll({
+    Post.findAll({
+       where: {
+          subject_id: req.params.id
+       },
       attributes: [
          'id',
          'post_url',
@@ -28,7 +31,7 @@ router.get('/homepage', (req, res) => {
       include: [
          {
             model: Subject,
-            attributes: ['id', 'user_id', 'comment_text', 'created_at'],
+            attributes: ['id', 'user_id', 'title', 'created_at'],
             include: {
                model: User,
                attributes: ['username']
@@ -44,7 +47,7 @@ router.get('/homepage', (req, res) => {
          // pass a single post object into the homepage template
          console.log(dbPostData[0]);
          const posts = dbPostData.map(post => post.get({ plain: true }));
-         res.render('homepage', { 
+         res.render('subject', { 
             posts,
             loggedIn: req.session.loggedIn
          });
@@ -56,45 +59,47 @@ router.get('/homepage', (req, res) => {
 });
 
 
-
-router.get('/post/:id', (req, res) => {
-   Post.findOne({
+//when loged in
+router.get('/subjects/:id', (req, res) => {
+   console.log(req.session)
+   Subject.findAll({
      where: {
-       id: req.params.id
+       user_id: req.params.id
      },
-     attributes: [
-       'id',
-       'post_url',
-       'title',
-       'created_at',
-       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
-     ],
-     include: [
-       {
-         model: Subject,
-         attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-         include: {
-           model: User,
-           attributes: ['username']
-         }
-       },
-       {
-         model: User,
-         attributes: ['username']
-       }
-     ]
+   //   attributes: [
+   //     'id',
+   //      'title',
+   //      'user_id',
+   //     'created_at',
+      
+   //   ],
+   //   include: [
+   //     {
+   //       model: User,
+   //       attributes: ['username'],
+   //       },
+   //      { model: Post,
+   //       attributes: ['id']
+
+   //     },
+      //  {
+      //    model: User,
+      //    attributes: ['username']
+      //  }
+     //]
    })
-     .then(dbPostData => {
-       if (!dbPostData) {
-         res.status(404).json({ message: 'No post found with this id' });
-         return;
+     .then(dbSubjectData => {
+       if (!dbSubjectData) {
+         res.render('homepage',{
+            loggedIn: req.session.loggedIn
+         })
        }
  
        // serialize the data
-       const post = dbPostData.get({ plain: true });
+       const post = dbSubjectData.get({ plain: true });
  
        // pass data to template
-       res.render('single-post', { 
+       res.render('homepage', { 
           post, 
           loggedIn: req.session.loggedIn
          });
