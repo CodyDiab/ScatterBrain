@@ -2,12 +2,10 @@
   "name": "scatterbrain",
   "version": "1.0.0",
   "description": "Web tab organization",
-
   "main": "server.js",
   "scripts": {
     "test": "jest",
     "start": "node server.js"
-
   },
   "repository": {
     "type": "git",
