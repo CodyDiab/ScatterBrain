@@ -44,6 +44,20 @@ router.post('/', withAuth, (req, res) => {
    }
  });
 
+ router.put('/:id', (req,res)=> {
+    Subject.update(
+       {title:req.body.title
+      },
+      {where: {
+         id:req.params.id
+      }
+     }
+    ).then(dbSubjectData => {
+       res.json(dbSubjectData)
+       
+    })
+ })
+
 
 router.delete('/:id', (req, res) => {
    Subject.destroy(
