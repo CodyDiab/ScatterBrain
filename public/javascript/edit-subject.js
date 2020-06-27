@@ -1,5 +1,6 @@
 async function editFormHandler(event) {
     event.preventDefault();
+   
     const id = window.location.toString().split('/') [
     window.location.toString().split('/').length-1]
     const title = document.querySelector('input[name="edit-post-title"]').value;
@@ -24,7 +25,7 @@ async function deleteFormHandler(event) {
     event.preventDefault();
     const id = window.location.toString().split('/') [
         window.location.toString().split('/').length-1]
-        const title = document.querySelector('input[name="edit-post-title"]').value;
+        // const title = document.querySelector('input[name="edit-post-title"]').value;
         const response = await fetch(`/api/subjects/${id}`, {
             method:'DELETE',
         })

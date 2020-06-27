@@ -24,6 +24,7 @@
   }
   .edit-resource-modal{
     @include modal;
+    display: block;
     
   }
   .add-resource-modal{

@@ -3,27 +3,29 @@
       <!-- Modal content -->
       <div class="modal-content">
          
-        <span id="close-edit-resource" class="close">&times;</span>
-        <form action="#">
+        <a href="/posts/{{post.subject_id}}" id="close-edit-resource" class="close">&times;</a>
+        <form action="#" class="edit-post-form">
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="">
+            <input class="mdl-textfield__input" type="text" id="" value="{{post.post_url}}" name="edit-post-url">
             <label class="mdl-textfield__label" >Edit URL...</label>
           </div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="">
+            <input class="mdl-textfield__input" type="text" id="" value="{{post.title}}" name="edit-post-title">
             <label class="mdl-textfield__label" >Edit Title...</label>
           </div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <textarea class="mdl-textfield__input" type="text" rows="4" id=""></textarea>
+            <textarea class="mdl-textfield__input" type="text" rows="4" id="" value="{{post.notes}}" name="edit-notes"></textarea>
             <label class="mdl-textfield__label" >Edit Notes...</label>
           </div>
-        </form>
-        <button class="mdl-button mdl-js-button mdl-button--raised">
+          <button class="mdl-button mdl-js-button mdl-button--raised" type="submit">
          Save
-        </button>
-        <button class="mdl-button mdl-js-button mdl-button--raised">
+        </button> 
+        <button id="delete-resource" class="mdl-button mdl-js-button mdl-button--raised">
           Delete Resource
         </button>
+        </form>
+        
       </div>
     
     </div>
+    <script src="/javascript/edit-resource.js"></script>

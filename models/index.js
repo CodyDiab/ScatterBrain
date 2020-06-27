@@ -17,6 +17,7 @@ Subject.hasMany(Post, {
 
 Post.belongsTo(Subject, {
     foreignKey: 'subject_id',
+    onDelete: 'CASCADE'
  });
 
 
