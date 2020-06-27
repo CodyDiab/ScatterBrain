@@ -191,7 +191,7 @@ input[type=submit] {
 
 .subject-card {
   border-radius: 15%;
-  width: 320px;
+  width: 450px;
   height: 200px;
 }
 
@@ -206,8 +206,8 @@ input[type=submit] {
   }
 }
 
-.resource {
-  width: 100%;
+.resource-card {
+  border-radius: 5px;
 }
 
 .subject-buttons-container {
@@ -318,6 +318,9 @@ input[type=text] {
 }
 
 @media only screen and (max-width: 768px) {
+  .field {
+    width: 100%;
+  }
   .buttons-container {
     display: -webkit-box;
     display: -ms-flexbox;

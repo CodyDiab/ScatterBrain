@@ -68,7 +68,9 @@ header{
  }
 
  @media only screen and (max-width: 768px) {
-
+     .field{
+         width:100%;
+     }
     .buttons-container{
         display: flex;
         margin-top: 5%;

@@ -1,7 +1,13 @@
  <div class="home">
     <header>
+      
+      <div>
       <h1 class="heading">ScatterBrain</h1>
+      </div>
   <nav class="buttons-container">
+    <span class="mdl-chip mdl-button--colored">
+    <span class="mdl-chip__text">UserName</span>
+   </span>
    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect " title="Add a Subject" id="add-subject">
     <i class="material-icons">add</i>
   </button> 
@@ -21,7 +27,7 @@
      <p>{{format_date created_at}}</p>
     </div>
     <div class="mdl-card__supporting-text">
-     Has {{resources.length}} {{format_plural "resource" resource.length}}
+     Has {{format_count posts.length}} {{format_plural "resource" posts.length}}
    </div>
     <div class = "mdl-card__actions">
      <a class="view-btn mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/posts/{{id}}">
