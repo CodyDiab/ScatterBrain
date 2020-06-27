@@ -76,7 +76,7 @@ router.get('/subjects/:id', (req, res) => {
      include: [
        {
          model: User,
-         attributes: ['username'],
+         attributes: ['id','username'],
          },
         { model: Post,
          attributes: ['id']

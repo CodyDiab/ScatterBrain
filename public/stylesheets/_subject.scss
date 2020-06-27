@@ -1,5 +1,8 @@
 .resource-card{
-    border-radius: 5px;
+    border-radius: 15%;
+    height:30%;
+    
+ 
 }
 
 .subject-buttons-container{
@@ -17,6 +20,9 @@
         margin-right: 0;
         flex-direction: column;
     
+    }
+    .resource-card{
+        width:100%;
     }
 
 }

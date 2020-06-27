@@ -79,7 +79,8 @@ input[type=text],input[type=password] {
 
   @media only screen and (max-width: 768px) {
     /* For mobile phones: */
-    .login-splash{width: 100%;}
+    .login-splash{width: 100%;
+    height: 100%;}
     .form-container{
         flex-direction: column;
     }
