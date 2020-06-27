@@ -24,8 +24,8 @@ Post.init(
        
       },
       notes: {
-        type: DataTypes.STRING,
-        allowNull: false,
+        type: DataTypes.TEXT,
+        allowNull: true,
         
       },
       subject_id: {

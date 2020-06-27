@@ -2,9 +2,9 @@
     <header>
       <h1 class="heading">ScatterBrain</h1>
   <nav class="subject-buttons-container">
-    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect " title="Return to Subjects" id="">
+    <a href="/" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect " title="Return to Subjects" id="">
       <i class="material-icons">home</i>
-    </button> 
+    </a>
    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect " title="Add a Resource" id="add-resource">
     <i class="material-icons">add</i>
   </button> 
@@ -17,13 +17,14 @@
     <main class="field">
      <div class="mdl-list">
        {{#if posts.length}}
+        {{#each posts}}
            <div class="resource mdl-card mdl-shadow--2dp">
              <div class="mdl-card__title">
-               <a href="{{resource_url}}"><i class="material-icons">link</i></a>
-              <h2 class="mdl-card__title-text">{{resource.title}}</h2>
+               <a href="{{post_url}}" target="_blank"><i class="material-icons">link</i></a>
+              <h2 class="mdl-card__title-text">{{title}}</h2>
               </div>
              <div class="mdl-card__supporting-text">
-               {{resource.notes}}
+               {{notes}}
              </div>
              <div class="mdl-card__menu">
               <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="edit-resource">
@@ -31,6 +32,7 @@
               </button>
             </div>
            </div>
+           {{/each}}
         {{else}}
         <div>
             <p>
@@ -45,33 +47,31 @@
       <div class="modal-content">
          
         <span id= "close-add-resource" class="close">&times;</span>
-        <form action="#">
+        <form action="#" class="new-post-form">
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="">
+            <input class="mdl-textfield__input" type="text" id="" name="post-url">
             <label class="mdl-textfield__label" >Paste URL...</label>
           </div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="">
+            <input class="mdl-textfield__input" type="text" id="" name="post-title">
             <label class="mdl-textfield__label" >Add Title...</label>
           </div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <textarea class="mdl-textfield__input" type="text" rows="4" id=""></textarea>
+            <textarea class="mdl-textfield__input" type="text" rows="4" id="" name="notes"></textarea>
             <label class="mdl-textfield__label" >Add Notes...</label>
           </div>
+          <button id="new-resource-submit" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect " title="Submit" type="submit">
+           <i class="material-icons">add</i>
+         </button> 
         </form>
-        <button class="mdl-button mdl-js-button mdl-button--raised">
-         Save
-        </button>
-        <button class="mdl-button mdl-js-button mdl-button--raised">
-          Delete Resource
-        </button>
+      
       </div>
     
     </div>
         
      </div>
     <!-- edit/delete modal-->
-    <div id="edit-resource-modal" class="edit-resource-modal">
+    {{!-- <div id="edit-resource-modal" class="edit-resource-modal">
 
       <!-- Modal content -->
       <div class="modal-content">
@@ -99,12 +99,12 @@
         </button>
       </div>
     
-    </div>
+    </div> --}}
         
      </div>
   
     </main>
     
     <script src="/javascript/subjectModal.js"></script>
-    
+    <script src="/javascript/add-resource.js"></script>
     <script src="/javascript/logout.js"></script>

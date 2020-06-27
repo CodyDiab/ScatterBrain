@@ -18,9 +18,9 @@ addResource.onclick= () => {
 closeAddResource.onclick = () => {
     closeModal(addResourceModal)
 }
-editResource.onclick= () => {
-    openModal(editResourceModal)
-}
-closeEditResource.onclick = () => {
-    closeModal(editResourceModal)
-}
+// editResource.onclick= () => {
+//     openModal(editResourceModal)
+// }
+// closeEditResource.onclick = () => {
+//     closeModal(editResourceModal)
+// }

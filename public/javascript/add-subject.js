@@ -3,7 +3,7 @@
 async function newFormHandler(event) {
     
     event.preventDefault();
-    console.log("click")
+    
     const title = document.querySelector('input[name="subject-title"]').value;
 
    const response = await fetch(`/api/subjects`, {
