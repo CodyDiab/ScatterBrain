@@ -17,7 +17,7 @@
     {{#each subjects}}
    <div class="subject-card mdl-card mdl-shadow--2dp">
      <div class="mdl-card__title">
-     <h2 class="mdl-card__title-text">{{subjects.subject.title}}</h2>
+     <h2 class="mdl-card__title-text">{{title}}</h2>
      <p>{{format_date created_at}}</p>
     </div>
     <div class="mdl-card__supporting-text">
@@ -29,9 +29,9 @@
        </a>
     </div>
     <div class="mdl-card__menu">
-      <button id="edit-subject" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+      <a href="/edit/subject/{{id}}" class=" edit-subject mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
         <i class="material-icons">edit</i>
-      </button>
+      </a>
      </div>
     </div>
     {{/each}}
@@ -67,27 +67,28 @@
   
   </div>
 <!--edit/delet subject modal-->
-<div id="edit-subject-modal" class="edit-subject-modal">
+{{!-- <div class="edit-subject-modal">
 
   <!-- Modal content -->
   <div class="modal-content">
      
-    <span id="close-edit-subject" class="close">&times;</span>
-    <form action="#">
+    <span  class="close close-edit-subject">&times;</span>
+    <form action="#" class="edit-post-form">
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input class="mdl-textfield__input" type="text" id="" value={{subject.title}}>
-        <label class="mdl-textfield__label" for="3">Edit Subject...</label>
+        <input class="mdl-textfield__input" type="text" name="edit-post-title" value={{this.title}}>
+        <label class="mdl-textfield__label" >Edit Subject...</label>
       </div>
-    </form>
-    <button class="mdl-button mdl-js-button mdl-button--raised">
+       <button class="mdl-button mdl-js-button mdl-button--raised">
      Save
     </button>
     <button class="mdl-button mdl-js-button mdl-button--raised">
       Delete Subject
     </button>
+    </form>
+   
   </div>
 
-</div>
+</div> --}}
 </div>
 <script src="/javascript/homepageModal.js"></script>
 <script src="/javascript/logout.js"></script>

@@ -1,9 +1,9 @@
 var sbjModal = document.querySelector("#subject-modal");
 var addSbj = document.querySelector("#add-subject");
 var closeSbj = document.querySelector("#close-subject-modal");
-var editSbjModal = document.querySelector("#edit-subject-modal");
-var editSbj = document.querySelector("#edit-subject");
-var closeEditSbj = document.querySelector("#close-edit-subject");
+var editSbjModal = document.querySelector(".edit-subject-modal");
+var editSbj = document.querySelector(".edit-subject");
+var closeEditSbj = document.querySelector(".close-edit-subject");
 
 
 
@@ -21,10 +21,10 @@ addSbj.onclick = ()=> {
 closeSbj.onclick =() => {
     closeModal(sbjModal)
 }
-editSbj.onclick = () => {
-    openModal(editSbjModal)
-}
-closeEditSbj.onclick = () => {
-    closeModal(editSbjModal)
-}
+// editSbj.onclick = () => {
+//     openModal(editSbjModal)
+// }
+// closeEditSbj.onclick = () => {
+//     closeModal(editSbjModal)
+// }
 

@@ -19,6 +19,7 @@
   }
   .edit-subject-modal{
   @include modal;
+  display: block;
  
   }
   .edit-resource-modal{

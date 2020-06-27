@@ -125,6 +125,7 @@ input[type=submit] {
   overflow: auto;
   background-color: black;
   background-color: rgba(0, 0, 0, 0.4);
+  display: block;
 }
 
 .edit-resource-modal {
