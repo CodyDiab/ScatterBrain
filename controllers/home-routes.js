@@ -82,10 +82,7 @@ router.get('/subjects/:id', (req, res) => {
          attributes: ['id']
 
        },
-       {
-         model: User,
-         attributes: ['username']
-       }
+      
      ]
    })
      .then(dbSubjectData => {
