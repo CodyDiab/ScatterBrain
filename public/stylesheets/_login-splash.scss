@@ -27,6 +27,7 @@ $btnColor: #066fa0b6 ;
 }
 .main-title{
     width:40%;
+    
 }
 .form-container{
     @include flexCenter(row,$primaryColor );

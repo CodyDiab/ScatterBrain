@@ -15,11 +15,23 @@ $primaryColor:rgb(138, 187, 150) ;
 $secondaryColor:rgba(46, 86, 62, 0.404) ;
 $btnColor: #066fa0b6 ;
 
+@keyframes animatedBackground {
+	from { background-position: 150%; }
+	to { background-position: 200%; }
+}
 body{
     height: 100%;
-    @include flexCenter(column,$secondaryColor );
+    @include flexCenter(column, url(logoscatterbrain.svg) );
     font-family: "Poppins", sans-serif;
-}
+    background-size: 200%;
+    background-position: center;
+    background-position: 150%;
+	background-repeat: repeat-x;
+
+	animation: animatedBackground 60s linear infinite;
+
+   }
+
 .home{
     align-items: flex-start;
     height: 100%;
@@ -45,10 +57,9 @@ header{
  .field{
      height:100vh;
      display: flex;
-     background-color: white;
+     background-color: rgba(255, 255, 255, 0.657);
      flex-wrap: wrap;
-    //  justify-content: flex-start;
-
+    
  }
   
  .buttons-container{
@@ -70,6 +81,7 @@ header{
  @media only screen and (max-width: 768px) {
      .field{
          width:100%;
+         background-color: white;
      }
     .buttons-container{
         display: flex;
@@ -77,6 +89,12 @@ header{
         margin-right: 0;
         flex-direction: column;
     
+    }
+    .body{
+        height: 100%;
+        @include flexCenter(column, $secondaryColor );
+        font-family: "Poppins", sans-serif;
+        
     }
 
 }
