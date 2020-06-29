@@ -25,6 +25,7 @@
   color: white;
 }
 
+
 .form-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -184,7 +185,9 @@ input[type=submit] {
 }
 
 
-
+.s-bar{
+  padding-top: 60px;
+}
 
 
 @media only screen and (max-width: 768px) {
