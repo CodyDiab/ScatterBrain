@@ -15,18 +15,7 @@ router.get('/', (req, res) => {
       });
 });
 
-router.get('/:username', (req,res) => {
-  User.findOne({
-     where: {
-        username: req.body.username
-     }
-  })
-  .then(dbUserData => res.json(dbUserData))
-      .catch(err => {
-         console.log(err);
-         res.status(500).json(err);
-      });
-});
+
 
 // GET /api/users/1
 router.get('/:id', (req, res) => {

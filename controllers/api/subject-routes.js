@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Subject } = require('../../models');
+const { Subject, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 /*
@@ -25,6 +25,25 @@ router.get('/:id', (req, res) => {
          res.status(400).json(err);
       });
 });
+
+router.get('/:username', (req,res) => {
+   Subject.findAll({
+      where: {
+         username: req.params.username
+      },
+      include: [
+         {
+            model: User,
+            attributes: ['username']
+         }
+      ],
+   })
+   .then(dbUserData => res.json(dbUserData))
+       .catch(err => {
+          console.log(err);
+          res.status(500).json(err);
+       });
+ });
 
 
 router.post('/', withAuth, (req, res) => {
