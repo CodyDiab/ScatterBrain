@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
 router.get('/:username', (req,res) => {
   User.findOne({
      where: {
-        username: req.params.username
+        username: req.body.username
      }
   })
   .then(dbUserData => res.json(dbUserData))

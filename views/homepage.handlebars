@@ -12,8 +12,10 @@
 
   <nav class="buttons-container">
     <span class="mdl-chip">
-    <span class="mdl-chip__text">{{User.username}}</span>
-    <p>{{user}}</p>
+      <p>{{user.email}}</p>
+      {{#if User}}
+    <span class="mdl-chip__text">{{username}}</span>
+    {{/if}}
    </span>
    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect " title="Add a Subject" id="add-subject">
     <i class="material-icons">add</i>
