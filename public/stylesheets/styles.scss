@@ -3,7 +3,7 @@
 @import "./modal";
 @import "./subject-card";
 @import "./subject";
-
+@import "./logo";
 @mixin flexCenter ($direction,$background){
     display: flex;
     justify-content: center;
