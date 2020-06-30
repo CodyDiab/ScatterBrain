@@ -72,7 +72,13 @@ header{
  }
  .mdl-button{
      background-color: $btnColor;
+     color: black;
+     
  }
+.util-button{
+    color:black;
+}
+
 
  input[type=text]{
      border-bottom:2px solid $secondaryColor;

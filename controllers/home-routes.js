@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
  
    res.render('login');
 });
-//when logged in
+//when logged in single subjects resources
 router.get('/posts/:id',withAuth, (req, res) => {
    console.log(req.session);
     Post.findAll({
@@ -59,7 +59,7 @@ router.get('/posts/:id',withAuth, (req, res) => {
 });
 
 
-//when loged in
+//when loged in all users subjects
 router.get('/subjects/:id',withAuth, (req, res) => {
    console.log(req.session)
    Subject.findAll({
@@ -79,7 +79,7 @@ router.get('/subjects/:id',withAuth, (req, res) => {
          attributes: ['id','username'],
          },
         { model: Post,
-         attributes: ['id']
+         attributes: ['subject_id']
 
        },
       

@@ -12,7 +12,7 @@ Subject.belongsTo(User, {
 });
 
 Subject.hasMany(Post, {
-   foreignKey: 'post_id'
+   foreignKey: 'subject_id'
 });
 
 Post.belongsTo(Subject, {

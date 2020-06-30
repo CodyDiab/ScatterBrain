@@ -19,6 +19,7 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  margin-top: 9%;
 }
 
 .title-login {
@@ -234,6 +235,10 @@ input[type=submit] {
   height: 30%;
 }
 
+.scrollable {
+  overflow-y: auto;
+}
+
 .subject-buttons-container {
   margin-top: 3%;
   margin-right: 10%;
@@ -377,6 +382,11 @@ header {
 
 .mdl-button {
   background-color: #066fa0b6;
+  color: black;
+}
+
+.util-button {
+  color: black;
 }
 
 input[type=text] {
