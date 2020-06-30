@@ -26,24 +26,6 @@ router.get('/:id', (req, res) => {
       });
 });
 
-router.get('/:username', (req,res) => {
-   Subject.findAll({
-      where: {
-         username: req.params.username
-      },
-      include: [
-         {
-            model: User,
-            attributes: ['username']
-         }
-      ],
-   })
-   .then(dbUserData => res.json(dbUserData))
-       .catch(err => {
-          console.log(err);
-          res.status(500).json(err);
-       });
- });
 
 
 router.post('/', withAuth, (req, res) => {
