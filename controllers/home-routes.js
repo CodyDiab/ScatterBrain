@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Subject } = require('../models');
-
+const withAuth = require('../utils/auth')
 
 //init render if not logged in
 router.get('/', (req, res) => {
@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
    res.render('login');
 });
 //when logged in
-router.get('/posts/:id', (req, res) => {
+router.get('/posts/:id',withAuth, (req, res) => {
    console.log(req.session);
     Post.findAll({
        where: {
@@ -60,7 +60,7 @@ router.get('/posts/:id', (req, res) => {
 
 
 //when loged in
-router.get('/subjects/:id', (req, res) => {
+router.get('/subjects/:id',withAuth, (req, res) => {
    console.log(req.session)
    Subject.findAll({
      where: {
