@@ -1,8 +1,9 @@
  <div class="home">
     <header>
       
-      <div>
-      <h1 class="heading">ScatterBrain</h1>
+      <div class="heading-logo">
+      <h1 class="heading">ScatterBrain<img class="logo" src="/stylesheets/logoscatterbrain.svg" type="image/svg+xml" alt=""></h1>
+      
       </div>
     
     <div class="s-bar">  
@@ -11,11 +12,11 @@
     </div>
 
   <nav class="buttons-container">
+  {{#if subjects}}
     <span class="mdl-chip">
-    
-    <span class="mdl-chip__text">{{subjects.username}}</span>
-   
+    <span class="mdl-chip__text">{{subjects.0.user.username}}</span>
    </span>
+   {{/if}}
    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect " title="Add a Subject" id="add-subject">
     <i class="material-icons">add</i>
   </button> 
@@ -35,11 +36,11 @@
      <p>{{format_date created_at}}</p>
     </div>
     <div class="mdl-card__supporting-text">
-     Has {{format_count posts.length}} {{format_plural "resource" posts.length}}
+     Has {{ posts.length}} {{format_plural "resource" posts.length}}
    </div>
     <div class = "mdl-card__actions">
-     <a class="view-btn mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/posts/{{id}}">
-         View Resources
+     <a class="util-button view-btn mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/posts/{{id}}">
+         View/Add Resources
        </a>
     </div>
     <div class="mdl-card__menu">

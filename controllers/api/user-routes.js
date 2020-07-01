@@ -29,7 +29,7 @@ router.get('/:id', (req, res) => {
             model: Post,
             attributes: ['id', 'title', 'post_url', 'created_at']
          },
-         // include the Comment model here:
+   
          {
             model: Subject,
             attributes: ['id', 'comment_text', 'created_at'],
@@ -38,12 +38,7 @@ router.get('/:id', (req, res) => {
                attributes: ['title']
             }
          }
-      //   {
-      //     model: Post,
-      //     attributes: ['title'],
-      //     through: Vote,
-      //     as: 'voted_posts'
-      //   }
+     
       ]
     })
       .then(dbUserData => {

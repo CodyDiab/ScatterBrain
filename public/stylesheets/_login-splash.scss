@@ -14,11 +14,21 @@ $btnColor: #066fa0b6 ;
 .login-splash{
     @include flexCenter(column,$primaryColor);
     border-radius: 5px;
-    height:70%;
+    height:80%;
     width:fit-content;
+    margin-top: 0%;
 }
-.title{
+.title-login{
     color:white;
+    
+    display:flex;
+    justify-content: center;
+    
+   
+}
+.main-title{
+    width:40%;
+    
 }
 .form-container{
     @include flexCenter(row,$primaryColor );
@@ -76,7 +86,11 @@ input[type=text],input[type=password] {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
-
+  @media only screen and (max-width: 861px) {
+    .main-title{
+        width:70%;
+    }
+  }
   @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     .login-splash{width: 100%;
@@ -84,4 +98,8 @@ input[type=text],input[type=password] {
     .form-container{
         flex-direction: column;
     }
+    
+  }
+  @media only screen and (max-width: 472px) {
+     .main-title{width:100%;}
   }
