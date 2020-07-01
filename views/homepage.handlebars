@@ -1,15 +1,37 @@
  <div class="home">
-    <header>
+  <header>
+
       
       <div class="heading-logo">
       <h1 class="heading">ScatterBrain<img class="logo" src="/stylesheets/logoscatterbrain.svg" type="image/svg+xml" alt=""></h1>
       
       </div>
-    
-    <div class="s-bar">  
+      <!--   
+      <div  class="s-bar">  
       <script async src="https://cse.google.com/cse.js?cx=017380663620750312906:hhgx_jrnisu"></script>
-      <div class="gcse-searchbox-only"></div>
-    </div>
+      <div id="googlebar" class="gcse-searchbox-only"></div>
+    </div> -->
+  
+
+    <form id="content" action="https://www.google.com/search" class="searchform" method="get"   name="searchform" target="_blank">
+  <input type="text hidden" name="input sitesearch" class="input" id="search-input"  type="hidden" value="example.com">
+  <input autocomplete="on" class="form-control search" name="q" required="required"  type="text">
+
+  <button type="reset" class="search" id="search-btn"></button>
+</form>
+  
+<script>
+const input = document.getElementById("search-input");
+const searchBtn = document.getElementById("search-btn");
+
+const expand = () => {
+  searchBtn.classList.toggle("close");
+  input.classList.toggle("square");
+};
+
+searchBtn.addEventListener("click", expand);
+
+</script>
 
   <nav class="buttons-container">
   {{#if subjects}}
@@ -25,7 +47,8 @@
     <i class="material-icons">logout</i>
   </button>
   </nav>
-    </header>
+  </header>
+
     <main class="field">
    <!---subjects go here-->
    {{#if subjects.length}}
@@ -105,6 +128,9 @@
 
 </div> --}}
 </div>
+
+
+
 <script src="/javascript/homepageModal.js"></script>
 <script src="/javascript/logout.js"></script>
 <script src="/javascript/add-subject.js"></script>
