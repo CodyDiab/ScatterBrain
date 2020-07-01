@@ -4,6 +4,8 @@
 @import "./subject-card";
 @import "./subject";
 @import "./logo";
+@import "./google-bar";
+
 @mixin flexCenter ($direction,$background){
     display: flex;
     justify-content: center;
@@ -53,6 +55,7 @@ header{
  .heading{
      color: white;
      text-shadow:2px 2px $secondaryColor;
+   
  }
  .field{
      height:100vh;
@@ -78,12 +81,25 @@ header{
 .util-button{
     color:black;
 }
-
-
+.util-container{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.search-container{
+    display: flex;
+    flex-direction: row;
+}
  input[type=text]{
      border-bottom:2px solid $secondaryColor;
  }
+  @media only screen and (max-width: 870px){
+      header{
+          justify-content: space-evenly;
+      }
 
+}
  @media only screen and (max-width: 768px) {
      .field{
          width:100%;

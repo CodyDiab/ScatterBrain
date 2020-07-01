@@ -6,25 +6,30 @@
       
       </div>
     
-    <div class="s-bar">  
-      <script async src="https://cse.google.com/cse.js?cx=017380663620750312906:hhgx_jrnisu"></script>
-      <div class="gcse-searchbox-only"></div>
-    </div>
-
+   
+     
+  <div class="util-container">
   <nav class="buttons-container">
-  {{#if subjects}}
-    <span class="mdl-chip">
-    <span class="mdl-chip__text">{{subjects.0.user.username}}</span>
-   </span>
-   {{/if}}
-   <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect " title="Add a Subject" id="add-subject">
-    <i class="material-icons">add</i>
-  </button> 
+ 
+         <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect " title="Add a Subject" id="add-subject">
+           <i class="material-icons">add</i>
+        </button> 
   
-   <button id="logout" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect " title="Log Out">
-    <i class="material-icons">logout</i>
-  </button>
-  </nav>
+           <button id="logout" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect " title="Log Out">
+          <i class="material-icons">logout</i>
+       </button>
+      </nav>
+              <section class="search-container" >
+              <script async src="https://cse.google.com/cse.js?cx=017380663620750312906:hhgx_jrnisu"></script>
+              <div title="Search Google" class="gcse-searchbox-only"></div>
+   
+            {{#if subjects}}
+               <span class="mdl-chip">
+               <span class="mdl-chip__text">{{subjects.0.user.username}}</span>
+               </span>
+             {{/if}}
+      </section>
+    </div>
     </header>
     <main class="field">
    <!---subjects go here-->
