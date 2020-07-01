@@ -2,18 +2,38 @@
   "name": "scatterbrain",
   "version": "1.0.0",
   "description": "Web tab organization",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CodyDiab/ScatterBrain.git"
   },
-  "author": "Cody Diab and John Ryan",
+  "keywords": [],
+  "author": "Cody Diab",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/CodyDiab/ScatterBrain/issues"
   },
-  "homepage": "https://github.com/CodyDiab/ScatterBrain#readme"
+  "homepage": "https://github.com/CodyDiab/ScatterBrain#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bcrypt": "^5.0.0",
+    "connect-session-sequelize": "^6.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.12"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1",
+    "just": "^0.1.8"
+  },
+  "engines": {
+    "node": "12.16.1"
+  }
 }

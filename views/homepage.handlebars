@@ -1,0 +1,111 @@
+ <div class="home">
+    <header>
+      
+      <div class="heading-logo">
+      <h1 class="heading">ScatterBrain<img class="logo" src="/stylesheets/logoscatterbrain.svg" type="image/svg+xml" alt=""></h1>
+      
+      </div>
+    
+    <div class="s-bar">  
+      <script async src="https://cse.google.com/cse.js?cx=017380663620750312906:hhgx_jrnisu"></script>
+      <div class="gcse-searchbox-only"></div>
+    </div>
+
+  <nav class="buttons-container">
+  {{#if subjects}}
+    <span class="mdl-chip">
+    <span class="mdl-chip__text">{{subjects.0.user.username}}</span>
+   </span>
+   {{/if}}
+   <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect " title="Add a Subject" id="add-subject">
+    <i class="material-icons">add</i>
+  </button> 
+  
+   <button id="logout" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect " title="Log Out">
+    <i class="material-icons">logout</i>
+  </button>
+  </nav>
+    </header>
+    <main class="field">
+   <!---subjects go here-->
+   {{#if subjects.length}}
+    {{#each subjects}}
+   <div class="subject-card mdl-card mdl-shadow--2dp">
+     <div class="mdl-card__title">
+     <h2 class="mdl-card__title-text">{{title}}</h2>
+     <p>{{format_date created_at}}</p>
+    </div>
+    <div class="mdl-card__supporting-text">
+     Has {{ posts.length}} {{format_plural "resource" posts.length}}
+   </div>
+    <div class = "mdl-card__actions">
+     <a class="util-button view-btn mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/posts/{{id}}">
+         View/Add Resources
+       </a>
+    </div>
+    <div class="mdl-card__menu">
+      <a href="/edit/subject/{{id}}" class=" edit-subject mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+        <i class="material-icons">edit</i>
+      </a>
+     </div>
+    </div>
+    {{/each}}
+    {{else}}
+    <div>
+        <p>Add some subjects!</p>
+    </div>
+    {{/if}}
+
+
+
+  
+    </main>
+
+<!--new subject modal-->
+<div id="subject-modal" class="subject-modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+       
+      <span id="close-subject-modal" class="close">&times;</span>
+      <form action="#" class="new-subject-form">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="" name="subject-title">
+          <label class="mdl-textfield__label" for="">Create a new Subject...</label>
+        </div>
+         <button id="new-subject-submit" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect " title="Submit" type="submit">
+           <i class="material-icons">add</i>
+         </button> 
+      </form>
+        
+    </div>
+  
+  </div>
+<!--edit/delet subject modal-->
+{{!-- <div class="edit-subject-modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+     
+    <span  class="close close-edit-subject">&times;</span>
+    <form action="#" class="edit-post-form">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" name="edit-post-title" value={{this.title}}>
+        <label class="mdl-textfield__label" >Edit Subject...</label>
+      </div>
+       <button class="mdl-button mdl-js-button mdl-button--raised">
+     Save
+    </button>
+    <button class="mdl-button mdl-js-button mdl-button--raised">
+      Delete Subject
+    </button>
+    </form>
+   
+  </div>
+
+</div> --}}
+</div>
+<script src="/javascript/homepageModal.js"></script>
+<script src="/javascript/logout.js"></script>
+<script src="/javascript/add-subject.js"></script>
+{{!-- <script src="/javascript/edit-subject.js"></script> --}}
