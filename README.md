@@ -1,5 +1,7 @@
 <h1 align="center">Scatterbrain</h1>
 
+### [Try Scatterbrain](https://stormy-scrubland-17368.herokuapp.com/)
+
 <p align="center">
 <img src="https://img.shields.io/badge/Javascript-brightgreen"/>
 <img src="https://img.shields.io/badge/Mysql-red"/>
