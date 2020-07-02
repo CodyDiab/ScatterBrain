@@ -48,4 +48,5 @@ add JAWSDB in heroku and 'heroku restart' to inform the server to fill a DB that
 ## Contact us at:
 ### [CodyDiab](https://github.com/CodyDiab)
 ### [JCSRyan](https://github.com/jcsryan)
+### emailcodydiab@gmail.com
 ### JohnConnorSRyan@gmail.com
