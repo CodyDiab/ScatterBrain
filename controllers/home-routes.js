@@ -79,7 +79,7 @@ router.get('/subjects/:id',withAuth, (req, res) => {
          attributes: ['id','username'],
          },
         { model: Post,
-         attributes: ['subject_id']
+         attributes: ['id']
 
        },
       

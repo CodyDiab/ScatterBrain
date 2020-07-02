@@ -1,10 +1,19 @@
 .logo {
-    width: 15%;
+    width: 18%;
     height: auto;
+    margin-bottom: 35px;
 
 }
 .heading-logo {
     display:flex;
     flex-direction: row;
+    width:40%;
+    flex-wrap: nowrap;
+}
+
+@media only screen and (max-width: 899px){
+   .logo{
+        display: none;
+    }
 
 }
