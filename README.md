@@ -23,13 +23,13 @@
 
 ## Screenshot of the webpage:
 ### Homepage lists subject tabs, each of which can contain a library of links and notes pertaining to a certain topic.
-![](2020-06-30-15-39-53.png)
+![](2020-07-02-02-33-35.png)
 
 ### The subject page loads when a specific topic is selected. Loading in the actual links and notes left by the user.
-![](2020-06-30-15-38-55.png)
+![](2020-07-02-02-34-23.png)
 
 ### All subjects and user notes can be added, edited, and deleted by the user.
-![](2020-06-30-15-42-24.png)
+![](2020-07-02-02-34-44.png)
 
 ## Usage
 ### Create a username and password, the PW must be at least six characters. Create a subject tab for your current area of research or interest. Fill that tabs library with any links and notes you might want to look at again.
