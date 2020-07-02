@@ -1,5 +1,7 @@
 <h1 align="center">Scatterbrain</h1>
 
+### [Try Scatterbrain](https://stormy-scrubland-17368.herokuapp.com/)
+
 <p align="center">
 <img src="https://img.shields.io/badge/Javascript-brightgreen"/>
 <img src="https://img.shields.io/badge/Mysql-red"/>
@@ -48,4 +50,5 @@ add JAWSDB in heroku and 'heroku restart' to inform the server to fill a DB that
 ## Contact us at:
 ### [CodyDiab](https://github.com/CodyDiab)
 ### [JCSRyan](https://github.com/jcsryan)
+### emailcodydiab@gmail.com
 ### JohnConnorSRyan@gmail.com
