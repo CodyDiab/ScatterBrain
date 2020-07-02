@@ -19,10 +19,19 @@
           <i class="material-icons">logout</i>
        </button>
       </nav>
-              <section class="search-container" >
+             <!-- <section class="search-container" >
               <script async src="https://cse.google.com/cse.js?cx=017380663620750312906:hhgx_jrnisu"></script>
               <div title="Search Google" class="gcse-searchbox-only"></div>
-   
+-->
+
+              <form id="content" action="https://www.google.com/search" method="get">
+                <input type="text submit" name="q" class="input input2" id="search-input" value ="">
+               
+                <button type="reset" class="search" id="search-btn"></button>
+              </form>
+ 
+
+
             {{#if subjects}}
                <span class="mdl-chip">
                <span class="mdl-chip__text">{{subjects.0.user.username}}</span>
@@ -86,31 +95,26 @@
     </div>
   
   </div>
-<!--edit/delet subject modal-->
-{{!-- <div class="edit-subject-modal">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-     
-    <span  class="close close-edit-subject">&times;</span>
-    <form action="#" class="edit-post-form">
-      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input class="mdl-textfield__input" type="text" name="edit-post-title" value={{this.title}}>
-        <label class="mdl-textfield__label" >Edit Subject...</label>
-      </div>
-       <button class="mdl-button mdl-js-button mdl-button--raised">
-     Save
-    </button>
-    <button class="mdl-button mdl-js-button mdl-button--raised">
-      Delete Subject
-    </button>
-    </form>
-   
-  </div>
-
-</div> --}}
 </div>
 <script src="/javascript/homepageModal.js"></script>
 <script src="/javascript/logout.js"></script>
 <script src="/javascript/add-subject.js"></script>
+
+  
+   <script>
+   const input = document.getElementById("search-input");
+     const searchBtn = document.getElementById("search-btn");
+
+     const expand = () => {
+     searchBtn.classList.toggle("close");
+     input.classList.toggle("square");
+    };
+
+    searchBtn.addEventListener("click", expand);
+
+
+
+   </script>
+
 {{!-- <script src="/javascript/edit-subject.js"></script> --}}
