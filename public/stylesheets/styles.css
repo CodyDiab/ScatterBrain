@@ -36,12 +36,6 @@
   width: 40%;
 }
 
-
-.s-bar {
-  justify-content: center;
-  width: 25%;
-}
-
 .form-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -212,12 +206,6 @@ input[type=submit] {
   cursor: pointer;
 }
 
-
-.s-bar{
-  padding-top: 60px;
-}
-
-
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .modal-content {
@@ -281,8 +269,9 @@ input[type=submit] {
 }
 
 .logo {
-  width: 15%;
+  width: 18%;
   height: auto;
+  margin-bottom: 35px;
 }
 
 .heading-logo {
@@ -293,6 +282,26 @@ input[type=submit] {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  width: 40%;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+@media only screen and (max-width: 870px) {
+  .logo {
+    display: none;
+  }
+}
+
+.gcse-search {
+  border-radius: 5px;
+  background-color: #8abb96;
+  width: 45%;
+ 
+}
+
+.search-container:hover .gcse-search {
+  display: unset;
 }
 
 @-webkit-keyframes animatedBackground {
@@ -401,8 +410,42 @@ header {
   color: black;
 }
 
+.util-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.search-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 input[type=text] {
   border-bottom: 2px solid rgba(46, 86, 62, 0.404);
+}
+
+@media only screen and (max-width: 870px) {
+  header {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -439,9 +482,7 @@ input[type=text] {
     background: rgba(46, 86, 62, 0.404);
     font-family: "Poppins", sans-serif;
   }
-  .s-bar {
-    display: flex;
-    align-content: flex-end;
-  }
 }
 /*# sourceMappingURL=styles.css.map */
+
+/* on focus for google bar */
