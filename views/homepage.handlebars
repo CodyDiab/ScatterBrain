@@ -10,7 +10,7 @@
      
   <div class="util-container">
   <nav class="buttons-container">
- 
+          
          <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect " title="Add a Subject" id="add-subject">
            <i class="material-icons">add</i>
         </button> 
@@ -18,18 +18,15 @@
            <button id="logout" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect " title="Log Out">
           <i class="material-icons">logout</i>
        </button>
+        
       </nav>
-             <section class="search-container" >
-             <script async src="https://cse.google.com/cse.js?cx=017380663620750312906:hhgx_jrnisu"></script> 
-               <div title="Search Google" class="gcse-searchbox-only"> 
--->
-              {{!-- <form id="content" action="https://www.google.com/search" method="get" class="cse-search">
-                <input type="text submit" name="q" class="input input2" id="search-input" value ="">
-               
-                <button type="reset" class="search" id="search-btn"></button>
-              </form> --}}
+          <section class="search-container" >
+              
+     <script async src="https://cse.google.com/cse.js?cx=017380663620750312906:hhgx_jrnisu"></script>
+      <div class="gcse-searchbox-only"></div>
+             
  
-              </div> 
+
 
             {{#if subjects}}
                <span class="mdl-chip">
@@ -100,20 +97,6 @@
 <script src="/javascript/logout.js"></script>
 <script src="/javascript/add-subject.js"></script>
 
+
   
-   <script>
-   const input = document.getElementById("search-input");
-     const searchBtn = document.getElementById("search-btn");
-
-     const expand = () => {
-     searchBtn.classList.toggle("close");
-     input.classList.toggle("square");
-    };
-
-    searchBtn.addEventListener("click", expand);
-
-
-
-   </script>
-
-{{!-- <script src="/javascript/edit-subject.js"></script> --}}
+  
