@@ -93,6 +93,11 @@ header{
     flex-direction: row;
    
 }
+.subject-search-container{
+    display: flex;
+    flex-direction: row;
+    margin-right: 60%;
+}
  input[type=text]{
      border-bottom:2px solid $secondaryColor;
  }

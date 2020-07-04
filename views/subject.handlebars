@@ -1,6 +1,6 @@
  <div class="home">
     <header>
-      <div class="heading-logo">
+      <div class="subject-heading-logo">
       <h1 class="heading">ScatterBrain<img class="logo" src="/stylesheets/logoscatterbrain.svg" type="image/svg+xml" alt=""></h1>
       
       </div>
@@ -18,10 +18,18 @@
        <i class="material-icons">logout</i>
     </button>
   </nav>
-   <div class="s-bar">  
+   {{!-- <div class="s-bar">  
       <script async src="https://cse.google.com/cse.js?cx=017380663620750312906:hhgx_jrnisu"></script>
       <div class="gcse-searchbox-only"></div>
-    </div>
+    </div> --}}
+     <section class="subject-search-container" >
+              
+       <form id="content" action="https://www.google.com/search" method="get">
+                <input type="text submit" name="q" class="input input2" id="search-input" value ="">
+               
+                <button type="reset" class="search" id="search-btn"></button>
+              </form>
+      </section>
   </div>
     </header>
     <main class="field">
@@ -80,36 +88,7 @@
     </div>
         
      </div>
-    <!-- edit/delete modal-->
-    {{!-- <div id="edit-resource-modal" class="edit-resource-modal">
-
-      <!-- Modal content -->
-      <div class="modal-content">
-         
-        <span id="close-edit-resource" class="close">&times;</span>
-        <form action="#">
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="">
-            <label class="mdl-textfield__label" >Edit URL...</label>
-          </div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="">
-            <label class="mdl-textfield__label" >Edit Title...</label>
-          </div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <textarea class="mdl-textfield__input" type="text" rows="4" id=""></textarea>
-            <label class="mdl-textfield__label" >Edit Notes...</label>
-          </div>
-        </form>
-        <button class="mdl-button mdl-js-button mdl-button--raised">
-         Save
-        </button>
-        <button class="mdl-button mdl-js-button mdl-button--raised">
-          Delete Resource
-        </button>
-      </div>
-    
-    </div> --}}
+ 
         
      </div>
   
@@ -118,3 +97,4 @@
     <script src="/javascript/subjectModal.js"></script>
     <script src="/javascript/add-resource.js"></script>
     <script src="/javascript/logout.js"></script>
+    <script src="/javascript/searchbar-animation.js"></script>

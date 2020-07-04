@@ -10,10 +10,18 @@
     width:40%;
     flex-wrap: nowrap;
 }
-
+.subject-heading-logo{
+    display:flex;
+    flex-direction: row;
+    width:40%;
+    flex-wrap: nowrap;
+}
 @media only screen and (max-width: 899px){
    .logo{
         display: none;
     }
-
+    .subject-heading-logo{
+        width: unset;
+    }
+   
 }
