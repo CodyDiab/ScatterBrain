@@ -14,18 +14,7 @@ router.get('/subject/:id',withAuth, (req,res) => {
        'created_at',  
       
    ],
-   // include: [
-   //     {
-   //         model: Post,
-   //         attributes: ['id'],
-           
-           
-   //     },
-   //     {
-   //         model: User,
-   //         attributes: ['username']
-   //     }
-   // ]
+ 
    }) 
    .then(dbSubjectData => {
       console.log(dbSubjectData)
@@ -64,10 +53,7 @@ router.get('/posts/:id/:subId',withAuth, (req,res) => {
            
            
       },
-   //     {
-   //         model: User,
-   //         attributes: ['username']
-   //     }
+  
    ]
    }) 
    .then(dbResourceData => {

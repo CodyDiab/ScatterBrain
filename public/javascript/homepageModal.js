@@ -21,10 +21,5 @@ addSbj.onclick = ()=> {
 closeSbj.onclick =() => {
     closeModal(sbjModal)
 }
-// editSbj.onclick = () => {
-//     openModal(editSbjModal)
-// }
-// closeEditSbj.onclick = () => {
-//     closeModal(editSbjModal)
-// }
+
 
